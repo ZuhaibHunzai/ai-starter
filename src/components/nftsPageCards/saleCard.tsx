@@ -35,6 +35,7 @@ export default function SaleCard(props: CardProps) {
               style={{
                 color: status === "Available" ? "#83F9B2" : "#F98383",
               }}
+              className="text-xs"
             >
               {status}
             </p>
