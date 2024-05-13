@@ -1,0 +1,100 @@
+import IdoCard from "../idoCard";
+import { BiNotepad } from "react-icons/bi";
+import { TfiMenuAlt } from "react-icons/tfi";
+import { FaRegCircleStop } from "react-icons/fa6";
+export default function SaleDetails() {
+  return (
+    <main>
+      <IdoCard>
+        <h1 className="text-[24px] font-[700] mb-2">Sale Details</h1>
+        <div className="flex justify-between items-center mt-2">
+          <h2 className=" text-[#B0B0B0] text-[20px] font-[700] ">
+            Total Rewards
+          </h2>
+          <h2 className="flex text-[20px] font-[700]">123456789 ABCDEF</h2>
+        </div>
+        <div className="flex justify-between items-center mt-2">
+          <h2 className=" text-[#B0B0B0] text-[20px] font-[700] ">
+            Deposit Token
+          </h2>
+          <h2 className="flex text-[20px] font-[700]">BTC</h2>
+        </div>
+        <div className="flex justify-between items-center mt-2">
+          <h2 className=" text-[#B0B0B0] text-[20px] font-[700] ">
+            Total Deposits
+          </h2>
+          <h2 className="flex text-[20px] font-[700]">123456.1235</h2>
+        </div>
+        <div className="flex justify-between items-center mt-2">
+          <h2 className=" text-[#B0B0B0] text-[20px] font-[700] ">Price</h2>
+          <h2 className="flex text-[20px] font-[700]">0.123456789 BTC</h2>
+        </div>
+        <div className="flex justify-between items-center mt-2">
+          <h2 className=" text-[#B0B0B0] text-[20px] font-[700] ">
+            Max Deposits
+          </h2>
+          <h2 className="flex text-[20px] font-[700]">0.123456789 BTC</h2>
+        </div>
+        <div className="flex mt-4">
+          <div>
+            <div className="flex flex-col items-center ">
+              <div className="h-16 w-16 bg-[#8395F9] rounded-full flex justify-center items-center">
+                <BiNotepad className="w-8 h-8" />
+              </div>
+
+              <div className="flex flex-col justify-between">
+                <span className="h-[25px] w-[3px] bg-[#8395F9]"></span>
+              </div>
+              <div className="h-16 w-16 bg-[#8395F9] rounded-full flex justify-center items-center">
+                <TfiMenuAlt className="w-8 h-8" />
+              </div>
+              <div className="flex flex-col justify-between">
+                <span className="h-[25px] w-[3px] bg-[#8395F9]"></span>
+              </div>
+              <div className="h-16 w-16 bg-[#8395F9] rounded-full flex justify-center items-center">
+                <FaRegCircleStop className="w-8 h-8" />
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <div className="flex flex-col pl-4">
+              <h2 className=" text-[#B0B0B0] text-[20px] font-[700] ">
+                WL Open
+              </h2>
+              <h2 className="flex text-[20px] font-[700]">
+                May 03,2024 11:00 UTC
+              </h2>
+            </div>
+            <div className="flex flex-col mt-8 pl-4">
+              <h2 className=" text-[#B0B0B0] text-[20px] font-[700] ">
+                Public Opens
+              </h2>
+              <h2 className="flex text-[20px] font-[700]">
+                May 03,2024 11:10 UTC
+              </h2>
+            </div>
+            <div className="flex flex-col mt-8 pl-4">
+              <h2 className=" text-[#B0B0B0] text-[20px] font-[700] ">
+                Closes
+              </h2>
+              <h2 className="flex text-[20px] font-[700]">
+                May 05,2024 11:00 UTC
+              </h2>
+            </div>
+          </div>
+        </div>
+        <h2 className="mt-4 text-[#B0B0B0] text-[20px] font-[700] ">
+          Progress
+        </h2>
+        <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700 mt-4">
+          <div
+            className="flex justify-start items-center pl-4 text-[22px] font-[700] bg-blue-600  text-blue-100 rounded-full h-12"
+            style={{ width: "42.25%" }}
+          >
+            42.25%
+          </div>
+        </div>
+      </IdoCard>
+    </main>
+  );
+}
