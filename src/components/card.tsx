@@ -10,6 +10,7 @@ type CardProps = {
   rate: string;
   deposit: string;
 };
+// nfts card
 export default function Card(props: CardProps) {
   return (
     <section className="flex flex-col card-layout  w-full">
