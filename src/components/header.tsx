@@ -48,13 +48,25 @@ export default function Header() {
           isOpen ? "block" : "hidden"
         } `}
       >
-        <Link href="/ido" className=" text-xl lg:text-xl font-bold">
+        <Link
+          href="/ido"
+          className=" text-xl lg:text-xl font-bold"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           IDO
         </Link>
-        <Link href="/nft" className=" text-xl lg:text-xl font-bold">
+        <Link
+          href="/nft"
+          className=" text-xl lg:text-xl font-bold"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           NFT
         </Link>
-        <Link href="" className=" text-xl lg:text-xl font-bold">
+        <Link
+          href=""
+          className=" text-xl lg:text-xl font-bold"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           Airdrop
         </Link>
 

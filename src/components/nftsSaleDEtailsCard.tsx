@@ -1,4 +1,7 @@
+import { BiNotepad } from "react-icons/bi";
 import IdoCard from "./idoCard";
+import { TfiMenuAlt } from "react-icons/tfi";
+import { FaRegCircleStop } from "react-icons/fa6";
 
 export default function NftsSaleDetailsCard() {
   return (
@@ -35,16 +38,23 @@ export default function NftsSaleDetailsCard() {
         </div>
         <div className="flex mt-4">
           <div>
-            <div className="flex flex-col items-center">
-              <div className="h-16 w-16 bg-gray-300 rounded-full"></div>
+            <div className="flex flex-col items-center ">
+              <div className="h-16 w-16 bg-[#8395F9] rounded-full flex justify-center items-center">
+                <BiNotepad className="w-8 h-8" />
+              </div>
+
               <div className="flex flex-col justify-between">
                 <span className="h-[25px] w-[3px] bg-[#8395F9]"></span>
               </div>
-              <div className="h-16 w-16 bg-gray-300 rounded-full"></div>
+              <div className="h-16 w-16 bg-[#8395F9] rounded-full flex justify-center items-center">
+                <TfiMenuAlt className="w-8 h-8" />
+              </div>
               <div className="flex flex-col justify-between">
                 <span className="h-[25px] w-[3px] bg-[#8395F9]"></span>
               </div>
-              <div className="h-16 w-16 bg-gray-300 rounded-full"></div>
+              <div className="h-16 w-16 bg-[#8395F9] rounded-full flex justify-center items-center">
+                <FaRegCircleStop className="w-8 h-8" />
+              </div>
             </div>
           </div>
           <div className="flex flex-col text-left">

@@ -34,7 +34,8 @@ export default function Nft() {
         </div>
       </div>
       <div className="md:hidden">
-        <div className="grid grid-cols-1">
+        <NftsHeader />
+        <div className="grid grid-cols-1 mt-4">
           <Img />
           <NftsSaleDetailsCard />
           <CostCard />

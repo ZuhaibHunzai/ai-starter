@@ -21,7 +21,7 @@ export default function SaleCard(props: CardProps) {
             className="rounded-tl-lg rounded-bl-lg"
           />
         </div>
-        <div className="w-full flex justify-between items-center pl-2 border-2 border-white rounded-tr-lg rounded-br-lg">
+        <div className="w-full flex justify-between items-center px-2 border-2 border-white rounded-tr-lg rounded-br-lg">
           <div className="flex flex-col">
             <div>
               <p className="text-xs ">{text}</p>
