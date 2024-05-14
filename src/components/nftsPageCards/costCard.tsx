@@ -3,7 +3,6 @@ import img from "../../../public/assets/ido-cover.png";
 
 import { BsTwitterX } from "react-icons/bs";
 import { TbWorld } from "react-icons/tb";
-import Img from "./img";
 
 export default function CostCard() {
   return (
@@ -11,8 +10,22 @@ export default function CostCard() {
       <div className="w-full p-2">
         <div className="bg-transparent col-span-3 flex flex-col">
           <div className="md:flex md:justify-end hidden ">
-            <BsTwitterX className="mr-4" />
-            <TbWorld />
+            <a
+              href="https://twitter.com/AIStarter_xyz"
+              rel="noreferrer"
+              target="_blank"
+              className="cursor-pointer"
+            >
+              <BsTwitterX className="mr-4" />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href=""
+              className="cursor-pointer"
+            >
+              <TbWorld />
+            </a>
           </div>
           <div>
             <p>Cost</p>
