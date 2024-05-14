@@ -66,7 +66,7 @@ export default function CostCard() {
                 className=""
               />
             </div>
-            <div className="flex justify-center items-center pl-2">
+            <div className="w-full flex justify-between items-center pl-2">
               <div className="flex flex-col text-sm">
                 <div>
                   <p>Bored Ape Gof NFT</p>
@@ -77,10 +77,9 @@ export default function CostCard() {
               </div>
               <div className="flex items-center p-2">
                 <div>
-                  <p>MAX:</p>
+                  <p>MAX: {selectedOption}</p>
                 </div>
                 <div className="flex">
-                  <p className="text-center">{selectedOption}</p>
                   <div className="relative flex justify-center items-center ">
                     <div
                       className=" bg-white text-black text-xl rounded ml-2 flex justify-center items-center cursor-pointer"
