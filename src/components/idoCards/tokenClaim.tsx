@@ -40,11 +40,9 @@ export default function TokenClaim() {
           </div>
           <div className="mt-4">
             <p className="text-[#B0B0B0] font-[500]">Next Unlock Date</p>
-            <input
-              type="date"
-              placeholder=""
-              className="bg-[#242424] w-[200px] h-12 rounded-lg mt-2 outline-none border-none p-2 text-white"
-            />
+            <p className="flex justify-center items-center text-center bg-[#242424] w-[200px] h-16 rounded-lg mt-2  p-2 text-white">
+              2024/05/24 20:00 UTC
+            </p>
           </div>
           <div className="mt-4">
             <p className="text-[#B0B0B0] font-[500]">Next Unclock</p>

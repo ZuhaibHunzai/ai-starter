@@ -44,7 +44,7 @@ export default function Header() {
       </div>
 
       <div
-        className={` w-full flex flex-col  gap-y-8 p-3   absolute z-10 right-0 top-28 bg-[#111116]   lg:relative  lg:top-0  lg:flex-row lg:justify-end  lg:items-center lg:gap-x-10 lg:flex ${
+        className={` w-full flex flex-col items-center  gap-y-8 p-3   absolute z-10 right-0 top-28 bg-[#111116]   lg:relative  lg:top-0  lg:flex-row lg:justify-end  lg:items-center lg:gap-x-10 lg:flex ${
           isOpen ? "block" : "hidden"
         } `}
       >

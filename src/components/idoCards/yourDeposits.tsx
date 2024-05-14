@@ -44,7 +44,7 @@ export default function YourDeposits() {
             <p className="text-[#8335F9] font-[400]">How to participate</p>
           </div>
           <div>
-            <button className="bg-[#8359F9] py-2 px-4 rounded-full font-[700]">
+            <button className="bg-[#8395F9] py-2 px-4 rounded-full font-[700]">
               Approve
             </button>
           </div>

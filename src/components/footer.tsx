@@ -19,9 +19,14 @@ export default function Footer() {
           />
         </div>
         <div className=" flex gap-x-6">
-          <Link href={"#"} className=" p-3 bg-[#313131] rounded-full">
+          <a
+            href="https://twitter.com/AIStarter_xyz"
+            target="_blank"
+            rel="noreferrer"
+            className=" p-3 bg-[#313131] rounded-full"
+          >
             <BsTwitterX className="  text-2xl  text-white" />
-          </Link>
+          </a>
           <Link href={"#"} className=" p-3 bg-[#313131] rounded-full">
             <FaGithub className="  text-2xl  text-white" />
           </Link>
