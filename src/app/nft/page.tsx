@@ -13,8 +13,12 @@ export default function Nft() {
         <div className="w-full grid grid-cols-7 gap-4 justify-between mt-8">
           <div className="col-span-4 grid gap-4">
             <div className="flex">
-              <Img />
-              <CostCard />
+              <div className="w-[40%]">
+                <Img />
+              </div>
+              <div className="w-[60%]">
+                <CostCard />
+              </div>
             </div>
             <div className="">
               <ProjectDetailsCard />
