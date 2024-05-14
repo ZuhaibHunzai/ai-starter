@@ -9,7 +9,11 @@ export default function Nft() {
   return (
     <section className="w-full flex justify-center items-center px-2">
       <div className="hidden md:block max-w-6xl">
-        <NftsHeader />
+        <NftsHeader
+        // isModalOpen={false}
+        // closeModal={() => {}}
+        // openModal={() => {}}
+        />
         <div className="w-full grid grid-cols-7 gap-4 justify-between mt-8">
           <div className="col-span-4 grid gap-4">
             <div className="flex">
@@ -34,7 +38,11 @@ export default function Nft() {
         </div>
       </div>
       <div className="md:hidden">
-        <NftsHeader />
+        <NftsHeader
+        // isModalOpen={false}
+        // closeModal={() => {}}
+        // openModal={() => {}}
+        />
         <div className="grid grid-cols-1 mt-4">
           <Img />
           <NftsSaleDetailsCard />
