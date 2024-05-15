@@ -10,8 +10,8 @@ export default function IdoHeader() {
   const [isPending, startTransition] = useTransition();
   const [walletAddress, setWalletAddress] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [maxNumber, setMaxNumber] = useState<number>(0);
   const { address } = useAccount();
+  // const address = "0xeD20f03f71394001596277f0D00Be8A9331eCFCd";
 
   function handleFetchData() {
     setIsLoading(true);
@@ -22,22 +22,6 @@ export default function IdoHeader() {
         .then((data) => {
           setWalletAddress(data?.columnData || []);
           setIsLoading(false);
-
-          // Check if the current address is available in walletAddress
-          if (data?.columnData && data.columnData.includes(address)) {
-            // Second fetch operation with columnLetter "B"
-            startTransition(() => {
-              fetchGoogleSheetData("B")
-                .then((dataB) => {
-                  setMaxNumber(dataB?.maxNumber || 0);
-                  setIsLoading(false);
-                })
-                .catch((error) => {
-                  console.error("Failed to fetch data for column B:", error);
-                  setIsLoading(false);
-                });
-            });
-          }
         })
         .catch((error) => {
           console.error("Failed to fetch data for column A:", error);
@@ -65,6 +49,7 @@ export default function IdoHeader() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => {
     setIsModalOpen(true);
+    handleFetchData();
   };
 
   const closeModal = () => {
@@ -119,8 +104,6 @@ export default function IdoHeader() {
         address={address}
         walletAddress={walletAddress}
         onMint={onMint}
-        maxNumber={maxNumber}
-        setMaxNumber={setMaxNumber}
       />
     </main>
   );

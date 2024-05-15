@@ -7,8 +7,6 @@ export async function fetchGoogleSheetData(columnLetter: string) {
   const privateKey = process.env.GOOGLE_SHEETS_PRIVATE_KEY as string;
   const spreadsheetId = process.env.SPREADSHEET_ID as string;
 
-  console.log(columnLetter, "columnLetter");
-
   // Check if the environment variables are defined
   if (!clientEmail || !privateKey || !spreadsheetId) {
     throw new Error("Required environment variables are not set.");

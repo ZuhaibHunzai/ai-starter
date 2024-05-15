@@ -11,8 +11,6 @@ interface DialogProps {
   address: string | undefined;
   walletAddress: string[];
   onMint: () => void;
-  maxNumber: number;
-  setMaxNumber: (value: number) => void;
   dialogStyle?: CSSProperties;
 }
 
@@ -24,8 +22,6 @@ const DialogDemo: React.FC<DialogProps> = ({
   address,
   walletAddress,
   onMint,
-  maxNumber,
-  setMaxNumber,
   dialogStyle,
 }) => {
   const isWalletConnected = walletAddress.includes(address || "");
@@ -40,18 +36,6 @@ const DialogDemo: React.FC<DialogProps> = ({
             <Dialog.Description className="DialogDescription">
               {description}
             </Dialog.Description>
-
-            {!pending && isWalletConnected && (
-              <div className="flex gap-3">
-                <input
-                  type="number"
-                  className="bg-white border border-gray-300 rounded-md py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:border-blue-500 focus:bg-white"
-                  value={maxNumber}
-                  onChange={(e) => setMaxNumber(Number(e.target.value))}
-                />
-                {/* <ButtonMintLight onClick={onMint} /> */}
-              </div>
-            )}
 
             <div
               style={{
