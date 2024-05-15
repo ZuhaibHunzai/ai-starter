@@ -43,7 +43,7 @@ export default function IdoHeader() {
   } else if (walletAddress.includes(address)) {
     description = "Mint is available";
   } else {
-    description = "Wallet Address is not White Listed";
+    description = `<h1>Wallet Address is <span style="color:red">Not</span/> White Listed</h1>`;
   }
 
   const [isModalOpen, setIsModalOpen] = useState(false);

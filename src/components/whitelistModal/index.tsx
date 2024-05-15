@@ -33,8 +33,11 @@ const DialogDemo: React.FC<DialogProps> = ({
         <div style={dialogStyle}>
           <Dialog.Content className="DialogContent">
             <Dialog.Title className="DialogTitle">WishList</Dialog.Title>
-            <Dialog.Description className="DialogDescription">
-              {description}
+            <Dialog.Description
+              className="DialogDescription"
+              dangerouslySetInnerHTML={{ __html: description }}
+            >
+              {/* {description} */}
             </Dialog.Description>
 
             <div
