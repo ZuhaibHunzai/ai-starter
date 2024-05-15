@@ -16,7 +16,6 @@ export default function NftsHeader() {
   const [isPending, startTransition] = useTransition();
   const [walletAddress, setWalletAddress] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [maxNumber, setMaxNumber] = useState<number>(0);
   const { address } = useAccount();
 
   function handleFetchData() {
@@ -29,22 +28,6 @@ export default function NftsHeader() {
         .then((data) => {
           setWalletAddress(data?.columnData || []);
           setIsLoading(false);
-
-          // Check if the current address is available in walletAddress
-          if (data?.columnData && data.columnData.includes(address)) {
-            // Second fetch operation with columnLetter "B"
-            startTransition(() => {
-              fetchGoogleSheetData("B")
-                .then((dataB) => {
-                  setMaxNumber(dataB?.maxNumber || 0);
-                  setIsLoading(false);
-                })
-                .catch((error) => {
-                  console.error("Failed to fetch data for column B:", error);
-                  setIsLoading(false);
-                });
-            });
-          }
         })
         .catch((error) => {
           console.error("Failed to fetch data for column A:", error);
@@ -63,12 +46,10 @@ export default function NftsHeader() {
     description = "Connect your Wallet";
   } else if (isLoading) {
     description = "Loading...";
-  } else if (
-    walletAddress.includes("0x04eaC2762F4C8C6a3ec8f7c225c72bC4D0FbcB79")
-  ) {
+  } else if (walletAddress.includes(address)) {
     description = "Mint is available";
   } else {
-    description = "Wallet Address is not White Listed";
+    description = `<h1>Wallet Address is <span style="color:red">Not</span/> White Listed</h1>`;
   }
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -125,11 +106,9 @@ export default function NftsHeader() {
         isOpen={isModalOpen}
         onClose={closeModal}
         pending={isLoading}
-        address="0x04eaC2762F4C8C6a3ec8f7c225c72bC4D0FbcB79"
+        address={address}
         walletAddress={walletAddress}
         onMint={onMint}
-        maxNumber={maxNumber}
-        setMaxNumber={setMaxNumber}
       />
     </main>
   );
