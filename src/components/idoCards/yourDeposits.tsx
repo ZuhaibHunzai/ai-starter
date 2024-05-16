@@ -1,20 +1,26 @@
+"use client";
 import { useWriteContract } from "wagmi";
-
+import { useAccount } from "wagmi";
 import IdoCard from "../idoCard";
 import { IDO_ADDRESS } from "@/app/addresses";
 import abi from "@/abis/idoAbi.json";
+import { parseEther } from "viem";
 
 export default function YourDeposits() {
   const { writeContract } = useWriteContract();
+  const { address } = useAccount();
 
   const deposit = async () => {
     try {
-      const deposit = await writeContract({
-        abi,
-        address: IDO_ADDRESS,
-        functionName: "joinIdo",
-        args: [],
-      });
+      console.log("clicked");
+
+      address &&
+        (await writeContract({
+          abi,
+          address: IDO_ADDRESS,
+          functionName: "joinIdo",
+          args: [parseEther("0.1")],
+        }));
     } catch (e) {
       console.log(e);
     }
