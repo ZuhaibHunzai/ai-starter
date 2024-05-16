@@ -12,7 +12,7 @@ export default function YourDeposits() {
       const deposit = await writeContract({
         abi,
         address: IDO_ADDRESS,
-        functionName: "migrate",
+        functionName: "joinIdo",
         args: [],
       });
     } catch (e) {
@@ -62,7 +62,10 @@ export default function YourDeposits() {
             <p className="text-[#8335F9] font-[400]">How to participate</p>
           </div>
           <div>
-            <button className="bg-[#8395F9] py-2 px-4 rounded-full font-[700]">
+            <button
+              className="bg-[#8395F9] py-2 px-4 rounded-full font-[700]"
+              onClick={deposit}
+            >
               Deposit
             </button>
           </div>
