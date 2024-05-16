@@ -22,7 +22,7 @@ import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { WagmiProvider, http } from "wagmi";
 
 import { createConfig } from "wagmi";
-import { mainnet } from "viem/chains";
+import { mainnet, sepolia } from "viem/chains";
 
 const projectId = "7e778a0cc9adc4e4434bf73bff51f07c";
 
@@ -54,9 +54,10 @@ const connectors = connectorsForWallets(
 
 export const config = createConfig({
   connectors,
-  chains: [mainnet],
+  chains: [mainnet, sepolia],
   transports: {
     [mainnet.id]: http(),
+    [sepolia.id]: http(),
   },
 });
 

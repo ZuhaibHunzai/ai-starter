@@ -1,6 +1,24 @@
+import { useWriteContract } from "wagmi";
+
 import IdoCard from "../idoCard";
+import { IDO_ADDRESS } from "@/app/addresses";
+import abi from "@/abis/idoAbi.json";
 
 export default function YourDeposits() {
+  const { writeContract } = useWriteContract();
+
+  const deposit = async () => {
+    try {
+      const deposit = await writeContract({
+        abi,
+        address: IDO_ADDRESS,
+        functionName: "migrate",
+        args: [],
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
   return (
     <main>
       <IdoCard>
@@ -45,7 +63,7 @@ export default function YourDeposits() {
           </div>
           <div>
             <button className="bg-[#8395F9] py-2 px-4 rounded-full font-[700]">
-              Approve
+              Deposit
             </button>
           </div>
         </div>
