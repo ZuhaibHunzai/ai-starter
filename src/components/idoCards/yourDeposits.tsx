@@ -23,7 +23,7 @@ export default function YourDeposits() {
           {
             loading: "depositing...",
             success: "deposited successfully",
-            error: (e) => `Error: ${e.message}`,
+            error: "something went wrong",
           }
         );
         console.log("hash hash ash", hash);
@@ -76,7 +76,7 @@ export default function YourDeposits() {
           </div>
           <div>
             <button
-              className="bg-[#8395F9] py-2 px-4 rounded-full font-[700]"
+              className="bg-[#8395F9] py-2 px-4 rounded-full font-[700] cursor-pointer"
               onClick={deposit}
             >
               Deposit
