@@ -22,7 +22,9 @@ export default function AiStarter() {
           >
             <BsTwitterX className="text-xl" />
           </a>
-          <TbWorld className="text-2xl" />
+          <a href="https://cam3lot.io/ " target="_blank" rel="noreferrer">
+            <TbWorld className="text-2xl" />
+          </a>
         </div>
       </div>
     </main>
