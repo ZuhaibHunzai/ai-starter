@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { BsTwitterX } from "react-icons/bs";
 import { TbWorld } from "react-icons/tb";
+import cover from "../../public/assets/camelot.png";
 type CardProps = {
   ProjecName: string;
   text: string;
@@ -21,7 +22,7 @@ export default function Card(props: CardProps) {
           width={400}
           height={250}
           alt="Photo"
-          src={"/assets/CoverCard.png"}
+          src={cover}
         />
       </Link>
       <div className=" flex flex-col pt-4 pb-6 px-2 card-data-layout  		">

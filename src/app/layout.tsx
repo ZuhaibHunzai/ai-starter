@@ -7,6 +7,7 @@ import "./globals.css";
 import Image from "next/image";
 import Footer from "@/components/footer";
 import { Providers } from "./providers";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" bg-[#111116]  relative  ">
+        <Toaster position="top-center" />
         <Providers>
           <div className="">
             <Image

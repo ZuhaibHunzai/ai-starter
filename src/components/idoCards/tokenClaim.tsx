@@ -1,6 +1,39 @@
+"use client";
+import { useAccount, useWriteContract } from "wagmi";
+import { IDO_ADDRESS } from "@/app/addresses";
+import abi from "@/abis/idoAbi.json";
 import IdoCard from "../idoCard";
+import dynamic from "next/dynamic";
+import toast from "react-hot-toast";
+
+const CountdownTimer = dynamic(() => import("./countDownTimer"), {
+  ssr: false,
+});
 
 export default function TokenClaim() {
+  const { writeContractAsync } = useWriteContract();
+  const { address } = useAccount();
+  async function Claim() {
+    try {
+      if (address) {
+        const hash = await toast.promise(
+          writeContractAsync({
+            address: IDO_ADDRESS,
+            abi,
+            functionName: "claimBTC",
+            args: [],
+          }),
+          {
+            loading: "claiming...",
+            success: "claimed BTC successfully",
+            error: "error claiming BTC ",
+          }
+        );
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  }
   return (
     <main>
       <IdoCard>
@@ -53,34 +86,14 @@ export default function TokenClaim() {
             />
           </div>
         </div>
-        <div className="flex justify-between mt-4">
-          <div className="flex flex-col items-center">
-            <h1 className="text-[#8395F9] font-[400] text-[48px] tracking-wide">
-              00
-            </h1>
-            <h2>days</h2>
-          </div>
-          <div className="flex flex-col items-center">
-            <h1 className="text-[#8395F9] font-[400] text-[48px] tracking-wide">
-              00
-            </h1>
-            <h2>hours</h2>
-          </div>
-          <div className="flex flex-col items-center">
-            <h1 className="text-[#8395F9] font-[400] text-[48px] tracking-wide">
-              00
-            </h1>
-            <h2>minutes</h2>
-          </div>
-          <div className="flex flex-col items-center">
-            <h1 className="text-[#8395F9] font-[400] text-[48px] tracking-wide">
-              00
-            </h1>
-            <h2>seconds</h2>
-          </div>
+        <div>
+          <CountdownTimer />
         </div>
         <div className="flex justify-end mt-4">
-          <button className="bg-[#434866] py-2 px-4 rounded-full font-[700]">
+          <button
+            className="bg-[#434866] py-2 px-4 rounded-full font-[700] cursor-pointer"
+            onClick={Claim}
+          >
             Claim
           </button>
         </div>
