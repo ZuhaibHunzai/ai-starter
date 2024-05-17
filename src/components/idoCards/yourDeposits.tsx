@@ -5,26 +5,33 @@ import IdoCard from "../idoCard";
 import { IDO_ADDRESS } from "@/app/addresses";
 import abi from "@/abis/idoAbi.json";
 import { parseEther } from "viem";
+import toast from "react-hot-toast";
 
 export default function YourDeposits() {
-  const { writeContract } = useWriteContract();
+  const { writeContractAsync } = useWriteContract();
   const { address } = useAccount();
-
-  const deposit = async () => {
+  async function deposit() {
     try {
-      console.log("clicked");
-
-      address &&
-        (await writeContract({
-          abi,
-          address: IDO_ADDRESS,
-          functionName: "joinIdo",
-          args: [parseEther("0.1")],
-        }));
+      if (address) {
+        const hash = await toast.promise(
+          writeContractAsync({
+            address: IDO_ADDRESS,
+            abi,
+            functionName: "joinIdo",
+            args: [],
+          }),
+          {
+            loading: "depositing...",
+            success: "deposited successfully",
+            error: (e) => `Error: ${e.message}`,
+          }
+        );
+        console.log("hash hash ash", hash);
+      }
     } catch (e) {
-      console.log(e);
+      console.log(e, "error  error");
     }
-  };
+  }
   return (
     <main>
       <IdoCard>

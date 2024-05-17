@@ -1,6 +1,28 @@
+"use client";
+import { useAccount, useWriteContract } from "wagmi";
+import { IDO_ADDRESS } from "@/app/addresses";
+import abi from "@/abis/idoAbi.json";
 import IdoCard from "../idoCard";
 
 export default function TokenClaim() {
+  const { writeContractAsync } = useWriteContract();
+  const { address } = useAccount();
+  async function Claim() {
+    try {
+      if (address) {
+        console.log("clicked");
+        const hash = await writeContractAsync({
+          address: IDO_ADDRESS,
+          abi,
+          functionName: "claimBTC",
+          args: [],
+        });
+        console.log(hash);
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  }
   return (
     <main>
       <IdoCard>
@@ -80,7 +102,10 @@ export default function TokenClaim() {
           </div>
         </div>
         <div className="flex justify-end mt-4">
-          <button className="bg-[#434866] py-2 px-4 rounded-full font-[700]">
+          <button
+            className="bg-[#434866] py-2 px-4 rounded-full font-[700]"
+            onClick={Claim}
+          >
             Claim
           </button>
         </div>
