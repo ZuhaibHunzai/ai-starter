@@ -32,7 +32,7 @@ const DialogDemo: React.FC<DialogProps> = ({
         <Dialog.Overlay className="DialogOverlay" />
         <div style={dialogStyle}>
           <Dialog.Content className="DialogContent">
-            <Dialog.Title className="DialogTitle">WishList</Dialog.Title>
+            <Dialog.Title className="DialogTitle">Check Whitelist</Dialog.Title>
             <Dialog.Description
               className="DialogDescription"
               dangerouslySetInnerHTML={{ __html: description }}
