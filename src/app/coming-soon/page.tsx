@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ComingSoon() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[80vh] ">
+    <div className="flex flex-col items-center justify-center h-[calc(100vh-356px)] ">
       <div className="text-center">
         <h1 className="lg:text-6xl text-4xl  font-bold text-white">
           Coming Soon

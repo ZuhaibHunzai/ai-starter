@@ -9,7 +9,7 @@ export default function TokenDetails() {
           Token Ticker: <span className="text-[#8395F9] font-[400]">CLOT</span>
         </p>
         <p className="text-[18px] font-[400]">
-          CToken Contract:{" "}
+          Token Contract:{" "}
           <span className="text-[#8395F9] font-[400] overflow-hidden">TBD</span>
         </p>
         <p className="text-[18px] font-[400]">

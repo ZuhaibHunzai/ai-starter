@@ -27,7 +27,7 @@ const Tabs = () => {
                 href="#link1"
                 role="tablist"
               >
-                Active [0]
+                Active [3]
               </a>
             </li>
             <li
@@ -45,7 +45,7 @@ const Tabs = () => {
                 href="#link2"
                 role="tablist"
               >
-                UPCOMING [20]
+                UPCOMING [0]
               </a>
             </li>
             <li
@@ -63,7 +63,7 @@ const Tabs = () => {
                 href="#link3"
                 role="tablist"
               >
-                COMPLETED [999]
+                COMPLETED [0]
               </a>
             </li>
           </ul>
@@ -71,7 +71,7 @@ const Tabs = () => {
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <div className=" grid flex-wrap grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid flex-wrap grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {Data.map(
                       (
                         {
@@ -102,65 +102,14 @@ const Tabs = () => {
                   </div>
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <div className=" grid flex-wrap grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {Data.map(
-                      (
-                        {
-                          ProjecName,
-                          text,
-                          totalRaise,
-                          totalReward,
-                          rate,
-                          deposit,
-                          link,
-                        },
-                        i
-                      ) => {
-                        return (
-                          <Card
-                            key={i}
-                            ProjecName={ProjecName}
-                            text={text}
-                            totalRaise={totalRaise}
-                            totalReward={totalReward}
-                            rate={rate}
-                            deposit={deposit}
-                            link={link}
-                          />
-                        );
-                      }
-                    )}
+                  <div className="flex justify-center items-center h-52">
+                    <p className="text-gray-400">No Data Found</p>
                   </div>
                 </div>
+
                 <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                  <div className=" grid flex-wrap grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {Data.map(
-                      (
-                        {
-                          ProjecName,
-                          text,
-                          totalRaise,
-                          totalReward,
-                          rate,
-                          deposit,
-                          link,
-                        },
-                        i
-                      ) => {
-                        return (
-                          <Card
-                            key={i}
-                            ProjecName={ProjecName}
-                            text={text}
-                            totalRaise={totalRaise}
-                            totalReward={totalReward}
-                            rate={rate}
-                            deposit={deposit}
-                            link={link}
-                          />
-                        );
-                      }
-                    )}
+                  <div className="flex justify-center items-center h-52">
+                    <p className="text-gray-400">No Data Found</p>
                   </div>
                 </div>
               </div>
@@ -180,7 +129,7 @@ const Data = [
     totalRaise: "500000 USDT",
     totalReward: "10M CLOT",
     rate: "1 CLOT = 0.045 USDT",
-    deposit: "",
+    deposit: "USDT",
     link: "usdt",
   },
   {
@@ -189,16 +138,16 @@ const Data = [
     totalRaise: "500000 USDC",
     totalReward: "10M CLOT",
     rate: "1 CLOT = 0.045 USDC",
-    deposit: "",
+    deposit: "USDC",
     link: "usdc",
   },
   {
     ProjecName: "Camelot Protocol",
     text: "Start at May 24, 2024 01:00 UTC",
-    totalRaise: "500000 BTC",
+    totalRaise: "7.628 BTC",
     totalReward: "10M CLOT",
-    rate: "1 CLOT = 0.045 BTC",
-    deposit: "",
+    rate: "1 CLOT = 0.000000686 BTC",
+    deposit: "BTC",
     link: "btc",
   },
 ];

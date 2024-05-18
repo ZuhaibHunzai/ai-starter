@@ -27,7 +27,11 @@ export default function Footer() {
           >
             <BsTwitterX className="  text-2xl  text-white" />
           </a>
-          <Link href={"#"} className=" p-3 bg-[#313131] rounded-full">
+          <Link
+            href={"https://github.com/AIStarter-xyz/"}
+            target="_blank"
+            className=" p-3 bg-[#313131] rounded-full"
+          >
             <FaGithub className="  text-2xl  text-white" />
           </Link>
           <Link

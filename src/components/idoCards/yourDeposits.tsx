@@ -6,10 +6,15 @@ import { IDO_ADDRESS } from "@/app/addresses";
 import abi from "@/abis/idoAbi.json";
 import { parseEther } from "viem";
 import toast from "react-hot-toast";
+import { useBalance } from "wagmi";
 
 export default function YourDeposits() {
   const { writeContractAsync } = useWriteContract();
   const { address } = useAccount();
+  const result = useBalance({
+    address: address,
+  });
+
   async function deposit() {
     try {
       if (address) {
@@ -47,15 +52,17 @@ export default function YourDeposits() {
         </div>
         <div className="flex justify-end mt-4">
           <p className="text-[22px] font-[500]">
-            your wallet balance
-            <span className="text-[#8395F9] font-[700] ml-2">1.1234568754</span>
+            your wallet balance:
+            <span className="text-[#8395F9] font-[700] ml-2">
+              {result?.data?.formatted} {result?.data?.symbol}
+            </span>
           </p>
         </div>
         <div className="w-full h-[50px] bg-[#242424] flex justify-between items-center rounded-lg  mt-2">
           <div>
             <input
               type="text"
-              placeholder="0.2325"
+              placeholder={result?.data?.formatted}
               className="outline-none border-none bg-transparent pl-2"
             />
           </div>

@@ -45,6 +45,7 @@ export default function TokenClaim() {
             <div className="h-16 flex rounded-lg mt-2 p-2 bg-[#242424]">
               <input
                 type="text"
+                disabled
                 placeholder=""
                 className="w-full outline-none border-none "
               />
@@ -55,6 +56,7 @@ export default function TokenClaim() {
             <div className="h-16 flex rounded-lg mt-2 p-2 bg-[#242424]">
               <input
                 type="text"
+                disabled
                 placeholder=""
                 className="w-full outline-none border-none "
               />
@@ -65,6 +67,7 @@ export default function TokenClaim() {
             <div className="h-16 flex rounded-lg mt-2 p-2 bg-[#242424]">
               <input
                 type="text"
+                disabled
                 placeholder=""
                 className="w-full outline-none border-none "
               />
@@ -75,6 +78,7 @@ export default function TokenClaim() {
             <div className="h-16 flex rounded-lg mt-2 p-2 bg-[#242424]">
               <input
                 type="text"
+                disabled
                 placeholder=""
                 className=" w-full outline-none border-none "
               />
@@ -97,6 +101,7 @@ export default function TokenClaim() {
             <div className="h-16 flex rounded-lg mt-2 p-2 bg-[#242424]">
               <input
                 type="text"
+                disabled
                 placeholder=""
                 className="w-full outline-none border-none "
               />

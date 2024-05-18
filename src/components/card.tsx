@@ -17,7 +17,7 @@ type CardProps = {
 export default function Card(props: CardProps) {
   return (
     <section className="flex flex-col card-layout  w-full">
-      <Link href={`/nft/${props.link}`}>
+      <Link href={`/ido/camelot/${props.link}`}>
         <Image
           className="card-layout w-full"
           width={400}
@@ -27,7 +27,7 @@ export default function Card(props: CardProps) {
         />
       </Link>
       <div className=" flex flex-col pt-4 pb-6 px-2 card-data-layout  		">
-        <Link href={`/nft/${props.link}`}>
+        <Link href={`/ido/camelot/${props.link}`}>
           <div>
             <p className="text-2xl font-bold tracking-wide">
               {props.ProjecName}
@@ -42,10 +42,10 @@ export default function Card(props: CardProps) {
             </button>
           </div>
           <div className=" flex  gap-x-4">
-            <a href="https://twitter.com/AIStarter_xyz" target="_blank">
+            <a href="https://x.com/CamelotLayer3" target="_blank">
               <BsTwitterX className="text-[#cbcacd] text-xl" />
             </a>
-            <a href="https://twitter.com/AIStarter_xyz" target="_blank">
+            <a href="https://cam3lot.io/" target="_blank">
               <TbWorld className="text-[#cbcacd] text-xl" />
             </a>
           </div>
@@ -55,7 +55,7 @@ export default function Card(props: CardProps) {
             {props.text}
           </p>
         </div>
-        <Link href={`/nft/${props.link}`}>
+        <Link href={`/ido/camelot/${props.link}`}>
           <div className=" flex flex-col  pt-2">
             <div className="data-card">
               <p className="text-md text-[#B0B0B0] capitalize">Total Raise</p>
@@ -79,7 +79,7 @@ export default function Card(props: CardProps) {
               <p className="text-md text-[#B0B0B0] capitalize">Deposit</p>
               <p className="text-md text-[#B0B0B0] uppercase">
                 {" "}
-                {props.deposit}USDT
+                {props.deposit}
               </p>
             </div>
           </div>
