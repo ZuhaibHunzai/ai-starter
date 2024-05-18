@@ -7,6 +7,18 @@ import SaleDetails from "@/components/idoCards/saleDetails";
 import TokenClaim from "@/components/idoCards/tokenClaim";
 
 export default function Nft({ params }: { params: { link: string } }) {
+  const validSections = ["usdt", "usdc", "btc"];
+  if (!validSections.includes(params?.link)) {
+    return (
+      <div className="flex flex-col items-center justify-center h-[calc(100vh-356px)] ">
+        <div className="text-center">
+          <h1 className="lg:text-6xl text-4xl  font-bold text-white">
+            Page Not Found
+          </h1>
+        </div>
+      </div>
+    );
+  }
   return (
     <main>
       <div className="w-full flex flex-col justify-between items-center px-2">
