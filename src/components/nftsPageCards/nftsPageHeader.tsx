@@ -18,6 +18,7 @@ export default function NftsHeader() {
   const [walletAddress, setWalletAddress] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const { address } = useAccount();
+  // const address = "0xeD20f03f71394001596277f0D00Be8A9331eCFCd";
 
   function handleFetchData() {
     // props.openModal();
@@ -48,7 +49,7 @@ export default function NftsHeader() {
   } else if (isLoading) {
     description = "Loading...";
   } else if (walletAddress.includes(address)) {
-    description = "Mint is available";
+    description = `<h1>You are <span style="color:#8395F9">White Listed</span/></h1>`;
   } else {
     description = `<h1>Wallet Address is <span style="color:red">Not</span/> White Listed</h1>`;
   }
@@ -56,6 +57,7 @@ export default function NftsHeader() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => {
     setIsModalOpen(true);
+    handleFetchData();
   };
 
   const closeModal = () => {

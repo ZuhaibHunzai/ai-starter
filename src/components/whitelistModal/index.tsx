@@ -24,7 +24,7 @@ const DialogDemo: React.FC<DialogProps> = ({
   onMint,
   dialogStyle,
 }) => {
-  const isWalletConnected = walletAddress.includes(address || "");
+  // const isWalletConnected = walletAddress.includes(address || "");
 
   return (
     <Dialog.Root open={isOpen}>

@@ -42,7 +42,7 @@ export default function IdoHeader() {
   } else if (isLoading) {
     description = "Loading...";
   } else if (walletAddress.includes(address)) {
-    description = `<h1>You are <span style="color:#8395F9">Not</span/> White Listed</h1>`;
+    description = `<h1>You are <span style="color:#8395F9">White Listed</span/></h1>`;
   } else {
     description = `<h1>Wallet Address is <span style="color:red">Not</span/> White Listed</h1>`;
   }
