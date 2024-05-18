@@ -3,6 +3,7 @@ import { useState, useTransition } from "react";
 import { fetchGoogleSheetData } from "../../../src/actions/fetchGoogleSheetApi";
 import { useAccount } from "wagmi";
 import DialogDemo from "@/components/whitelistModal/index";
+import allLayer from "../../../public/assets/allayer-icon.png";
 
 // type FetchProps = {
 //   isModalOpen: boolean;
@@ -10,7 +11,7 @@ import DialogDemo from "@/components/whitelistModal/index";
 //   openModal: () => void;
 // };
 import Image from "next/image";
-import nftLogo from "../../../public/assets/nfts-logo.png";
+import nftLogo from "../../../public/assets/logo_new.png";
 
 export default function NftsHeader() {
   const [isPending, startTransition] = useTransition();
@@ -70,23 +71,21 @@ export default function NftsHeader() {
           <div className="flex flex-col pl-4">
             <div>
               <h1 className="text-white text-[24px] font-[700]">
-                Project Name
+                Camelot Protocol
               </h1>
             </div>
-            <div className="flex">
-              <div className="py-2">
-                <button className="bg-[#313131] rounded-full py-2 px-4 cursor-pointer">
+            <div className="flex gap-x-4 ">
+              <div className="">
+                <button className="bg-[#313131] rounded-full py-2 px-6 cursor-pointer">
                   Public
                 </button>
               </div>
-              <div className="p-2">
-                <button className="bg-[#313131] rounded-full py-2 px-4 cursor-pointer">
-                  AlLayer
-                </button>
-              </div>
-              <div className="p-2">
-                <button className="bg-[#313131] rounded-full py-2 px-4 cursor-pointer">
-                  Tag3
+              <div className="">
+                <button className="bg-[#313131] rounded-full py-1 pr-4 cursor-pointer flex gap-x-2 items-center ">
+                  <div className="flex justify-start">
+                    <Image src={allLayer} alt="alllayer-icon" />
+                  </div>
+                  <p>AILayer</p>
                 </button>
               </div>
             </div>

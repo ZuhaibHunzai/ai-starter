@@ -1,5 +1,4 @@
 import Image from "next/image";
-import img from "../../../public/assets/ido-cover.png";
 
 type CardProps = {
   status: string;
@@ -11,17 +10,17 @@ export default function SaleCard(props: CardProps) {
   const { text, btc, status } = props;
   return (
     <main>
-      <div className="flex items-center">
-        <div>
+      <div className="flex items-center w-full h-full">
+        <div className="h-14 w-14">
           <Image
-            src={img}
+            src="/assets/ido_cover_latest.png"
+            alt="img"
             width={90}
             height={90}
-            alt="img"
-            className="rounded-tl-lg rounded-bl-lg"
+            className="rounded-tl-lg rounded-bl-lg h-full w-full object-fill"
           />
         </div>
-        <div className="w-full flex justify-between items-center px-2 border-2 border-white rounded-tr-lg rounded-br-lg">
+        <div className="w-full flex justify-between items-center py-2 px-2 border border-gray-400 rounded-tr-lg rounded-br-lg">
           <div className="flex flex-col">
             <div>
               <p className="text-xs">{text}</p>

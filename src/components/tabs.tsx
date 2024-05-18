@@ -81,6 +81,7 @@ const Tabs = () => {
                           totalReward,
                           rate,
                           deposit,
+                          link,
                         },
                         i
                       ) => {
@@ -93,6 +94,7 @@ const Tabs = () => {
                             totalReward={totalReward}
                             rate={rate}
                             deposit={deposit}
+                            link={link}
                           />
                         );
                       }
@@ -110,6 +112,7 @@ const Tabs = () => {
                           totalReward,
                           rate,
                           deposit,
+                          link,
                         },
                         i
                       ) => {
@@ -122,6 +125,7 @@ const Tabs = () => {
                             totalReward={totalReward}
                             rate={rate}
                             deposit={deposit}
+                            link={link}
                           />
                         );
                       }
@@ -139,6 +143,7 @@ const Tabs = () => {
                           totalReward,
                           rate,
                           deposit,
+                          link,
                         },
                         i
                       ) => {
@@ -151,6 +156,7 @@ const Tabs = () => {
                             totalReward={totalReward}
                             rate={rate}
                             deposit={deposit}
+                            link={link}
                           />
                         );
                       }
@@ -169,43 +175,30 @@ const Tabs = () => {
 export default Tabs;
 const Data = [
   {
-    ProjecName: " Project Name",
-    text: "Start at May 03, 2024 11:00 UTC",
-    totalRaise: "25000",
-    totalReward: "1041667",
-    rate: "0,0024",
+    ProjecName: "Camelot Protocol",
+    text: "Start at May 24, 2024 01:00 UTC",
+    totalRaise: "500000 USDT",
+    totalReward: "10M CLOT",
+    rate: "1 CLOT = 0.045 USDT",
     deposit: "",
+    link: "usdt",
   },
   {
-    ProjecName: " Project Name",
-    text: "Start at May 03, 2024 11:00 UTC",
-    totalRaise: "25000",
-    totalReward: "1041667",
-    rate: "0,0024",
+    ProjecName: "Camelot Protocol",
+    text: "Start at May 24, 2024 01:00 UTC",
+    totalRaise: "500000 USDC",
+    totalReward: "10M CLOT",
+    rate: "1 CLOT = 0.045 USDC",
     deposit: "",
+    link: "usdc",
   },
   {
-    ProjecName: " Project Name",
-    text: "Start at May 03, 2024 11:00 UTC",
-    totalRaise: "25000",
-    totalReward: "1041667",
-    rate: "0,0024",
+    ProjecName: "Camelot Protocol",
+    text: "Start at May 24, 2024 01:00 UTC",
+    totalRaise: "500000 BTC",
+    totalReward: "10M CLOT",
+    rate: "1 CLOT = 0.045 BTC",
     deposit: "",
-  },
-  {
-    ProjecName: " Project Name",
-    text: "Start at May 03, 2024 11:00 UTC",
-    totalRaise: "25000",
-    totalReward: "1041667",
-    rate: "0,0024",
-    deposit: "",
-  },
-  {
-    ProjecName: " Project Name",
-    text: "Start at May 03, 2024 11:00 UTC",
-    totalRaise: "25000",
-    totalReward: "1041667",
-    rate: "0,0024",
-    deposit: "",
+    link: "btc",
   },
 ];

@@ -1,7 +1,7 @@
-import { BiNotepad } from "react-icons/bi";
 import IdoCard from "./idoCard";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { FaRegCircleStop } from "react-icons/fa6";
+import { MdOutlineDateRange } from "react-icons/md";
 
 export default function NftsSaleDetailsCard() {
   return (
@@ -9,10 +9,8 @@ export default function NftsSaleDetailsCard() {
       <IdoCard>
         <h1 className="text-[24px] font-[700] mb-2">Sale Details</h1>
         <div className="flex justify-between items-center mt-2">
-          <h2 className=" text-[#B0B0B0] text-[20px] font-[700] ">
-            Total Rewards
-          </h2>
-          <h2 className="flex text-[20px] font-[700]">123456789 ABCDEF</h2>
+          <h2 className=" text-[#B0B0B0] text-[20px] font-[700] ">Hard Cap</h2>
+          <h2 className="flex text-[20px] font-[700]">1,234,567,890 BTC</h2>
         </div>
         <div className="flex justify-between items-center mt-2">
           <h2 className=" text-[#B0B0B0] text-[20px] font-[700] ">
@@ -24,30 +22,21 @@ export default function NftsSaleDetailsCard() {
           <h2 className=" text-[#B0B0B0] text-[20px] font-[700] ">
             Total Deposits
           </h2>
-          <h2 className="flex text-[20px] font-[700]">123456.1235</h2>
+          <h2 className="flex text-[20px] font-[700]">11,234,567,890.123456</h2>
         </div>
-        <div className="flex justify-between items-center mt-2">
-          <h2 className=" text-[#B0B0B0] text-[20px] font-[700] ">Price</h2>
-          <h2 className="flex text-[20px] font-[700]">0.123456789 BTC</h2>
-        </div>
-        <div className="flex justify-between items-center mt-2">
-          <h2 className=" text-[#B0B0B0] text-[20px] font-[700] ">
-            Max Deposits
-          </h2>
-          <h2 className="flex text-[20px] font-[700]">0.123456789 BTC</h2>
-        </div>
+
         <div className="flex mt-4">
           <div>
             <div className="flex flex-col items-center ">
               <div className="h-16 w-16 bg-[#8395F9] rounded-full flex justify-center items-center">
-                <BiNotepad className="w-8 h-8" />
+                <TfiMenuAlt className="w-8 h-8" />
               </div>
 
               <div className="flex flex-col justify-between">
                 <span className="h-[25px] w-[3px] bg-[#8395F9]"></span>
               </div>
               <div className="h-16 w-16 bg-[#8395F9] rounded-full flex justify-center items-center">
-                <TfiMenuAlt className="w-8 h-8" />
+                <MdOutlineDateRange className="w-8 h-8" />
               </div>
               <div className="flex flex-col justify-between">
                 <span className="h-[25px] w-[3px] bg-[#8395F9]"></span>
@@ -63,7 +52,7 @@ export default function NftsSaleDetailsCard() {
                 WL Open
               </h2>
               <h2 className="flex text-[20px] font-[700]">
-                May 03,2024 11:00 UTC
+                May 03,2024 11:10 UTC
               </h2>
             </div>
             <div className="flex flex-col mt-8 pl-4">

@@ -30,10 +30,18 @@ export default function Footer() {
           <Link href={"#"} className=" p-3 bg-[#313131] rounded-full">
             <FaGithub className="  text-2xl  text-white" />
           </Link>
-          <Link href={"#"} className=" p-3 bg-[#313131] rounded-full">
+          <Link
+            href="https://discord.gg/vUf5Q5RXsu"
+            target="_blank"
+            className=" p-3 bg-[#313131] rounded-full"
+          >
             <FaDiscord className="  text-2xl  text-white" />
           </Link>
-          <Link href={"#"} className=" p-3 bg-[#313131] rounded-full">
+          <Link
+            href="https://medium.com/@aistarter"
+            target="_blank"
+            className=" p-3 bg-[#313131] rounded-full"
+          >
             <LiaMediumM className="  text-2xl  text-white" />
           </Link>
         </div>
@@ -45,9 +53,13 @@ export default function Footer() {
         <p className=" text-[#B0B0B0] text-md text-center ">
           Copyright 2024, All Rights Reserved
         </p>
-        <p className=" hidden lg:block  text-[#B0B0B0] text-md ">
+        <Link
+          href="https://drive.google.com/file/d/1WQCndV2sVxk9NzneCRjJ4_y_c8Tehkk9/view"
+          target="_blank"
+          className=" hidden lg:block  text-[#B0B0B0] text-md cursor-pointer "
+        >
           Terms of Use
-        </p>
+        </Link>
       </div>
     </section>
   );

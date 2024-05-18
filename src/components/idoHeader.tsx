@@ -4,7 +4,8 @@ import { fetchGoogleSheetData } from "@/actions/fetchGoogleSheetApi";
 import { useAccount } from "wagmi";
 import DialogDemo from "@/components/whitelistModal/index";
 import Image from "next/image";
-import idoLogo from "../../public/assets/ido-logo.png";
+import idoLogo from "../../public/assets/logo_new.png";
+import allLayer from "../../public/assets/allayer-icon.png";
 
 export default function IdoHeader() {
   const [isPending, startTransition] = useTransition();
@@ -41,7 +42,7 @@ export default function IdoHeader() {
   } else if (isLoading) {
     description = "Loading...";
   } else if (walletAddress.includes(address)) {
-    description = "Mint is available";
+    description = `<h1>You are <span style="color:#8395F9">Not</span/> White Listed</h1>`;
   } else {
     description = `<h1>Wallet Address is <span style="color:red">Not</span/> White Listed</h1>`;
   }
@@ -58,36 +59,34 @@ export default function IdoHeader() {
   return (
     <main>
       <div className="w-full flex flex-col-reverse justify-between md:flex md:flex-row ">
-        <div className="flex items-end">
+        <div className="flex md:justify-between">
           <div>
             <Image src={idoLogo} width={100} height={100} alt="img" />
           </div>
-          <div className="flex flex-col pl-4">
-            <div>
+          <div className="flex flex-col pl-4 justify-around">
+            <div className="">
               <h1 className="text-white text-[24px] font-[700]">
-                Project Name
+                Camelot Protocol
               </h1>
             </div>
-            <div className="flex">
-              <div className="py-2">
-                <button className="bg-[#313131] rounded-full py-2 px-4 cursor-pointer">
+            <div className="flex gap-x-4 ">
+              <div className="">
+                <button className="bg-[#313131] rounded-full py-2 px-6 cursor-pointer">
                   Public
                 </button>
               </div>
-              <div className="p-2">
-                <button className="bg-[#313131] rounded-full py-2 px-4 cursor-pointer">
-                  AlLayer
-                </button>
-              </div>
-              <div className="p-2">
-                <button className="bg-[#313131] rounded-full py-2 px-4 cursor-pointer">
-                  Tag3
+              <div className="">
+                <button className="bg-[#313131] rounded-full py-1 pr-4 cursor-pointer flex gap-x-2 items-center ">
+                  <div className="flex justify-start">
+                    <Image src={allLayer} alt="alllayer-icon" />
+                  </div>
+                  <p>AILayer</p>
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <div className="m-2 flex justify-end items-end ">
+        <div className="m-2 flex justify-end items-start ">
           <button
             className="text-[18px]  rounded-full py-2 px-4 bg-[#434866] font-[700] cursor-pointer"
             onClick={openModal}

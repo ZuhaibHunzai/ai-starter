@@ -8,7 +8,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <main className="   px-5 md:px-10 py-10 flex justify-between lg:px-36 items-center relative ">
+    <main className="px-5 md:px-10 py-10 flex justify-between lg:px-36 items-center relative ">
       <div className=" p-4">
         <Link href="/">
           <Image
@@ -24,7 +24,7 @@ export default function Header() {
       <div className="block lg:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
+          className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400 cursor-pointer"
         >
           <Image
             src={"/assets/menu.png"}
@@ -50,21 +50,21 @@ export default function Header() {
       >
         <Link
           href="/ido"
-          className=" text-xl lg:text-xl font-bold"
+          className=" text-xl lg:text-xl font-bold border-b-2 border-transparent hover:border-b-[#8395F9] hover:transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >
           IDO
         </Link>
         <Link
-          href="/nft"
-          className=" text-xl lg:text-xl font-bold"
+          href="/coming-soon"
+          className=" text-xl lg:text-xl font-bold border-b-2 border-transparent hover:border-b-[#8395F9] hover:transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >
           NFT
         </Link>
         <Link
-          href=""
-          className=" text-xl lg:text-xl font-bold"
+          href="/coming-soon"
+          className=" text-xl lg:text-xl font-bold border-b-2 border-transparent hover:border-b-[#8395F9] hover:transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >
           Airdrop

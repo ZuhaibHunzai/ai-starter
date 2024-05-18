@@ -21,6 +21,11 @@
   position: relative;
 }
 
+.iekbcc0 {
+  background-color: #8395f9 !important;
+  border-radius: 25px;
+}
+
 .tab-active::after {
   content: "";
   position: absolute;

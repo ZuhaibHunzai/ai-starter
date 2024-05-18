@@ -32,8 +32,8 @@ export default function CostCard() {
   };
   return (
     <main>
-      <div className="w-full p-2">
-        <div className="bg-transparent col-span-3 flex flex-col p-6">
+      <div className="w-full px-2">
+        <div className="bg-transparent col-span-3 flex flex-col ">
           <div className="md:flex md:justify-end hidden ">
             <a
               href="https://twitter.com/AIStarter_xyz"
@@ -68,7 +68,7 @@ export default function CostCard() {
                 className=""
               />
             </div>
-            <div className="w-full flex justify-between items-center pl-2 border-2 ">
+            <div className="w-full flex justify-between items-center pl-2 border border-gray-400 rounded-r-lg ">
               <div className="flex flex-col text-sm">
                 <div>
                   <p>Bored Ape Gof NFT</p>
@@ -84,17 +84,17 @@ export default function CostCard() {
                 <div className="flex">
                   <div className="relative flex justify-center items-center ">
                     <div
-                      className=" bg-white text-black text-xl rounded ml-2 flex justify-center items-center cursor-pointer"
+                      className=" bg-gray-400 text-black text-xl rounded ml-2 flex justify-center items-center cursor-pointer"
                       onClick={toggleSelect}
                     >
                       <FaAngleDown />
                     </div>
                     {isOpen && (
-                      <div className="absolute mt-1 w-full bg-white border rounded-md shadow-lg">
+                      <div className="absolute mt-1 w-full top-5 left-1 bg-gray-800 border-transparent rounded-lg cursor-pointer ">
                         {options.map((option) => (
                           <div
                             key={option}
-                            className="p-2 border-none outline-none cursor-pointer bg-black"
+                            className="p-1 cursor-pointer text-white hover:bg-gray-400"
                             onClick={() => handleOptionClick(option)}
                           >
                             {option}
@@ -109,12 +109,12 @@ export default function CostCard() {
           </div>
           <div>
             <p className="mt-2">
-              You wallet balance{" "}
+              your wallet balance{" "}
               <span className="text-[#8395F9]">1.1235465</span>
             </p>
           </div>
           <div className="mt-2">
-            <div className="w-full flex justify-center flex-col md:flex-row col items-center">
+            <div className="w-full flex justify-center flex-col md:flex-row col items-center gap-4">
               <div className="w-full h-[50px] bg-[#242424] flex justify-between items-center gap-1 rounded-lg   px-1">
                 <input
                   type="text"
@@ -128,7 +128,7 @@ export default function CostCard() {
               </div>
 
               <div className="w-full">
-                <button className="block w-full mt-4 rounded-full bg-[#8395F9]  py-2 md:ml-2 text-center cursor-pointer">
+                <button className="block w-full rounded-full bg-[#8395F9]  py-2 md:ml-2 text-center cursor-pointer">
                   Approve
                 </button>
               </div>

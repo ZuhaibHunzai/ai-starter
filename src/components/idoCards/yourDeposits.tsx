@@ -72,7 +72,7 @@ export default function YourDeposits() {
         </div>
         <div className="flex justify-between items-center mt-4">
           <div>
-            <p className="text-[#8335F9] font-[400]">How to participate</p>
+            <p className="text-[#8395F9] font-[400]">How to participate</p>
           </div>
           <div>
             <button

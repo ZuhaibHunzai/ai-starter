@@ -41,7 +41,7 @@ export default function ProjectDetailsCard() {
         <p className="font-[700]">100% TGE</p>
         <p>Distribution</p>
         <p className="font-[700]">TBA</p>
-        <h1 className="pt-4 pb-2 text-xl font-[700]">Inventry</h1>
+        <h1 className="pt-4 pb-2 text-xl font-[700]">Inventory</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {Data?.map((data) => {
             return (

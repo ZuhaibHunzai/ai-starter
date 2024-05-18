@@ -11,12 +11,13 @@ type CardProps = {
   totalReward: string;
   rate: string;
   deposit: string;
+  link: string;
 };
 // nfts card
 export default function Card(props: CardProps) {
   return (
     <section className="flex flex-col card-layout  w-full">
-      <Link href="/nft">
+      <Link href={`/nft/${props.link}`}>
         <Image
           className="card-layout w-full"
           width={400}
@@ -26,7 +27,7 @@ export default function Card(props: CardProps) {
         />
       </Link>
       <div className=" flex flex-col pt-4 pb-6 px-2 card-data-layout  		">
-        <Link href="/nft">
+        <Link href={`/nft/${props.link}`}>
           <div>
             <p className="text-2xl font-bold tracking-wide">
               {props.ProjecName}
@@ -36,8 +37,9 @@ export default function Card(props: CardProps) {
 
         <div className="flex justify-between flex-wrap gap-y-2 lg:gap-y-0 pt-4 items-center">
           <div className=" flex gap-x-4">
-            <button className="tab-button px-8 py-1">Public</button>
-            <button className="tab-button px-8 py-1">Public</button>
+            <button className="tab-button px-8 py-1 text-gray-400">
+              Public
+            </button>
           </div>
           <div className=" flex  gap-x-4">
             <a href="https://twitter.com/AIStarter_xyz" target="_blank">
@@ -53,7 +55,7 @@ export default function Card(props: CardProps) {
             {props.text}
           </p>
         </div>
-        <Link href="/nft">
+        <Link href={`/nft/${props.link}`}>
           <div className=" flex flex-col  pt-2">
             <div className="data-card">
               <p className="text-md text-[#B0B0B0] capitalize">Total Raise</p>
@@ -66,14 +68,12 @@ export default function Card(props: CardProps) {
                 Total Rewards
               </p>
               <p className="text-md  text-[#CECECE] uppercase">
-                {props.totalReward} PAIRED
+                {props.totalReward}
               </p>
             </div>
             <div className="data-card">
               <p className="text-md text-[#B0B0B0] capitalize">rate</p>
-              <p className="text-md text-[#B0B0B0] uppercase">
-                1 PAIRED = {props.rate} USDT
-              </p>
+              <p className="text-md text-[#B0B0B0] uppercase">{props.rate}</p>
             </div>
             <div className="data-card">
               <p className="text-md text-[#B0B0B0] capitalize">Deposit</p>
